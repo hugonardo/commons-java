@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+dependencies {
+    implementation "com.google.code.findbugs:jsr305:${findbugs_jsr305_version}"
+
+    testImplementation("junit:junit:${junit_version}", { exclude group: 'org.hamcrest' })
+    testImplementation "org.hamcrest:hamcrest-junit:${hamcrest_version}"
+    testImplementation "org.mockito:mockito-core:${mockito_version}"
+}
+
+sourceCompatibility = "${java_source_compatibility}"
+targetCompatibility = "${java_target_compatibility}"
