@@ -35,6 +35,10 @@ public class Objects {
         return value != null;
     }
 
+    public static boolean not(boolean exp) {
+        return !exp;
+    }
+
     public static <T> T requireNonNull(T obj) {
         if (obj == null) {
             throw new NullPointerException();
